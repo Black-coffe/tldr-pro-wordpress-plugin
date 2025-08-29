@@ -1,0 +1,50 @@
+{
+    "name": "tldr-pro/wordpress-plugin",
+    "description": "TL;DR Pro - AI-Powered Content Summary Engine for WordPress",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your-email@example.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "anthropic-ai/sdk": "0.2.0",
+        "nyholm/psr7": "^1.8",
+        "openai-php/client": "^0.16.0",
+        "symfony/http-client": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "TLDR_Pro\\": "includes/",
+            "TLDR_Pro\\Admin\\": "admin/",
+            "TLDR_Pro\\Frontend\\": "public/",
+            "TLDR_Pro\\API\\": "includes/api/",
+            "TLDR_Pro\\Database\\": "includes/database/"
+        },
+        "files": [
+            "includes/functions.php"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@composer dump-autoload -o"
+        ],
+        "post-update-cmd": [
+            "@composer dump-autoload -o"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

@@ -1,0 +1,70 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Build files
+/dist/
+/build/
+*.zip
+*.tar.gz
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/logs/
+debug.log
+error_log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# WordPress
+wp-config.php
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+
+# Testing
+/tests/coverage/
+.phpunit.result.cache
+.phpunit.cache/
+
+# Composer
+composer.phar
+composer.lock
+
+# Package managers
+package-lock.json
+yarn.lock
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+desktop.ini
+
+# API Keys (never commit!)
+config/api-keys.php
+.api-keys

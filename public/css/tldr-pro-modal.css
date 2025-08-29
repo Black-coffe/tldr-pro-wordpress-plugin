@@ -1,0 +1,555 @@
+/**
+ * TL;DR Pro Enhanced Modal Styles
+ * Advanced styling for modal with toolbar, themes, and social features
+ * 
+ * @package TLDR_Pro
+ * @since 2.3.0
+ */
+
+/* ==========================================================================
+   Modal Toolbar
+   ========================================================================== */
+
+.tldr-pro-modal-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    gap: 20px;
+}
+
+.tldr-pro-toolbar-left,
+.tldr-pro-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tldr-pro-toolbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Action Buttons */
+.tldr-pro-action-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tldr-pro-action-btn:hover {
+    background: #ffffff;
+    border-color: #9ca3af;
+    color: #111827;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tldr-pro-action-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Tooltip */
+.tldr-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    background: #1f2937;
+    color: #ffffff;
+    font-size: 12px;
+    white-space: nowrap;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.tldr-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: #1f2937;
+}
+
+.tldr-pro-action-btn:hover .tldr-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==========================================================================
+   Social Share Buttons
+   ========================================================================== */
+
+.tldr-pro-social-share {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tldr-pro-share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tldr-pro-share-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Social Network Colors */
+.tldr-share-facebook:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+    color: #ffffff;
+}
+
+.tldr-share-twitter:hover {
+    background: #1da1f2;
+    border-color: #1da1f2;
+    color: #ffffff;
+}
+
+.tldr-share-linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+    color: #ffffff;
+}
+
+.tldr-share-whatsapp:hover {
+    background: #25d366;
+    border-color: #25d366;
+    color: #ffffff;
+}
+
+.tldr-share-email:hover {
+    background: #ea4335;
+    border-color: #ea4335;
+    color: #ffffff;
+}
+
+.tldr-pro-share-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ==========================================================================
+   Loading Indicator
+   ========================================================================== */
+
+.tldr-pro-modal-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.tldr-spinner {
+    text-align: center;
+}
+
+.tldr-spinner-circle {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    border: 3px solid #e5e7eb;
+    border-top-color: #667eea;
+    border-radius: 50%;
+    animation: tldr-rotate 0.8s linear infinite;
+}
+
+@keyframes tldr-rotate {
+    to { transform: rotate(360deg); }
+}
+
+.tldr-spinner-text {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Rating System
+   ========================================================================== */
+
+.tldr-pro-rating-container {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+}
+
+.tldr-pro-rating-prompt {
+    margin-bottom: 15px;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.tldr-pro-rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tldr-rating-star {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tldr-rating-star:hover {
+    transform: scale(1.2);
+}
+
+.tldr-rating-star svg {
+    width: 28px;
+    height: 28px;
+    stroke: #d1d5db;
+    fill: none;
+    transition: all 0.2s ease;
+}
+
+.tldr-rating-star:hover svg,
+.tldr-rating-star.tldr-star-filled svg {
+    stroke: #fbbf24;
+    fill: #fbbf24;
+}
+
+.tldr-pro-rating-feedback {
+    color: #10b981;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Fullscreen Mode
+   ========================================================================== */
+
+.tldr-pro-modal.tldr-fullscreen-mode {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    z-index: 999999 !important;
+}
+
+.tldr-fullscreen-mode .tldr-pro-modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+/* ==========================================================================
+   Dark Theme
+   ========================================================================== */
+
+.tldr-pro-modal.tldr-theme-dark {
+    background: #1f2937;
+    color: #f3f4f6;
+}
+
+.tldr-theme-dark .tldr-pro-modal-header {
+    background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);
+}
+
+.tldr-theme-dark .tldr-pro-modal-toolbar {
+    background: #111827;
+    border-color: #374151;
+}
+
+.tldr-theme-dark .tldr-pro-action-btn {
+    background: #1f2937;
+    border-color: #374151;
+    color: #9ca3af;
+}
+
+.tldr-theme-dark .tldr-pro-action-btn:hover {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+}
+
+.tldr-theme-dark .tldr-pro-modal-content {
+    color: #e5e7eb;
+}
+
+.tldr-theme-dark .tldr-pro-modal-content h1,
+.tldr-theme-dark .tldr-pro-modal-content h2,
+.tldr-theme-dark .tldr-pro-modal-content h3 {
+    color: #a78bfa;
+}
+
+.tldr-theme-dark .tldr-pro-modal-footer {
+    background: #111827;
+    border-color: #374151;
+}
+
+.tldr-theme-dark .tldr-pro-meta {
+    color: #9ca3af;
+}
+
+.tldr-theme-dark .tldr-pro-share-btn {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+.tldr-theme-dark .tldr-pro-rating-container {
+    border-color: #374151;
+}
+
+.tldr-theme-dark .tldr-pro-rating-prompt {
+    color: #d1d5db;
+}
+
+.tldr-theme-dark .tldr-pro-modal-loader {
+    background: rgba(17, 24, 39, 0.95);
+}
+
+.tldr-theme-dark .tldr-spinner-circle {
+    border-color: #374151;
+    border-top-color: #a78bfa;
+}
+
+.tldr-theme-dark .tldr-spinner-text {
+    color: #9ca3af;
+}
+
+/* Dark theme for overlay */
+body.tldr-dark-theme .tldr-pro-overlay {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* ==========================================================================
+   Notification
+   ========================================================================== */
+
+.tldr-pro-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 1000000;
+    display: none;
+}
+
+.tldr-notification-success {
+    background: #10b981;
+    color: #ffffff;
+}
+
+.tldr-notification-error {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .tldr-pro-modal-toolbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px 15px;
+    }
+
+    .tldr-pro-toolbar-left,
+    .tldr-pro-toolbar-center,
+    .tldr-pro-toolbar-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tldr-pro-social-share {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tldr-pro-action-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .tldr-tooltip {
+        display: none;
+    }
+
+    .tldr-pro-rating-stars {
+        gap: 4px;
+    }
+
+    .tldr-rating-star svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tldr-pro-modal-toolbar {
+        padding: 8px;
+    }
+
+    .tldr-pro-action-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .tldr-pro-share-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .tldr-pro-rating-container {
+        padding: 15px;
+    }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .tldr-pro-modal-toolbar,
+    .tldr-pro-rating-container,
+    .tldr-pro-close,
+    .tldr-pro-modal-loader {
+        display: none !important;
+    }
+
+    .tldr-pro-modal {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .tldr-pro-modal-header {
+        background: none !important;
+        color: #000 !important;
+    }
+
+    .tldr-pro-modal-content {
+        color: #000 !important;
+    }
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@keyframes tldr-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tldr-pro-modal-toolbar {
+    animation: tldr-fade-in 0.3s ease-out;
+}
+
+.tldr-pro-rating-container {
+    animation: tldr-fade-in 0.3s ease-out 0.1s both;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+/* Focus styles */
+.tldr-pro-action-btn:focus-visible,
+.tldr-pro-share-btn:focus-visible,
+.tldr-rating-star:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Skip animations for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .tldr-pro-action-btn,
+    .tldr-pro-share-btn,
+    .tldr-rating-star,
+    .tldr-spinner-circle {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .tldr-pro-modal {
+        border: 2px solid #000;
+    }
+
+    .tldr-pro-action-btn,
+    .tldr-pro-share-btn {
+        border-width: 2px;
+    }
+}
+
+/* Screen reader only text */
+.tldr-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}

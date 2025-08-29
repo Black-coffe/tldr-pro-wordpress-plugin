@@ -1,0 +1,184 @@
+/**
+ * TL;DR Pro Compatibility Styles
+ * Ensures no conflicts with WordPress core and popular themes
+ * 
+ * @package TLDR_Pro
+ * @since 2.8.1
+ */
+
+/* ==========================================================================
+   Scope all styles to plugin-specific containers
+   ========================================================================== */
+
+/* Ensure our button styles don't affect WP admin buttons */
+.tldr-pro-button-container .tldr-pro-button,
+.tldr-pro-button-container button.tldr-pro-button {
+    /* Reset only problematic inherited styles that themes might add */
+    /* Do NOT reset properties that we want to keep from tldr-pro-button.css */
+    text-indent: 0;
+    text-shadow: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    
+    /* Ensure proper box model */
+    box-sizing: border-box !important;
+}
+
+/* Ensure modal doesn't inherit theme styles */
+.tldr-pro-modal,
+.tldr-pro-modal * {
+    box-sizing: border-box !important;
+}
+
+/* Prevent our styles from affecting WordPress admin */
+body.wp-admin .tldr-pro-button-container {
+    /* Admin-specific overrides if needed */
+}
+
+/* Prevent conflicts with common theme frameworks */
+
+/* Bootstrap compatibility */
+.tldr-pro-button-container .btn {
+    /* Override Bootstrap button styles */
+}
+
+/* Elementor compatibility */
+.elementor-widget .tldr-pro-button-container {
+    /* Elementor-specific adjustments */
+}
+
+/* Divi compatibility */
+.et_pb_module .tldr-pro-button-container {
+    /* Divi-specific adjustments */
+}
+
+/* ==========================================================================
+   WordPress Core Class Compatibility
+   ========================================================================== */
+
+/* Don't affect WordPress notices */
+.tldr-pro-admin-wrapper .notice {
+    /* Use WordPress default notice styles */
+}
+
+/* Don't affect WordPress buttons in our admin area */
+.tldr-pro-admin-wrapper .button,
+.tldr-pro-admin-wrapper .button-primary,
+.tldr-pro-admin-wrapper .button-secondary {
+    /* Use WordPress default button styles */
+}
+
+/* ==========================================================================
+   Z-index Management (avoid conflicts with admin bar, etc.)
+   ========================================================================== */
+
+/* WordPress admin bar has z-index: 99999 */
+.tldr-pro-modal {
+    z-index: 99998 !important; /* Just below admin bar */
+}
+
+.tldr-pro-modal-overlay {
+    z-index: 99997 !important;
+}
+
+/* Fixed position buttons */
+.tldr-position-fixed_bottom_left,
+.tldr-position-fixed_bottom_right,
+.tldr-position-fixed_bottom_center,
+.tldr-position-floating_bar {
+    z-index: 9998 !important; /* Well below admin bar and modals */
+}
+
+/* ==========================================================================
+   Form Element Scoping
+   ========================================================================== */
+
+/* Ensure our form elements don't affect global styles */
+.tldr-pro-admin-wrapper input[type="text"],
+.tldr-pro-admin-wrapper input[type="number"],
+.tldr-pro-admin-wrapper select,
+.tldr-pro-admin-wrapper textarea {
+    /* Use WordPress form defaults */
+}
+
+/* ==========================================================================
+   Media Query Compatibility
+   ========================================================================== */
+
+/* Ensure responsive styles don't conflict with theme breakpoints */
+@media screen and (max-width: 782px) {
+    /* WordPress admin responsive breakpoint */
+    .tldr-pro-button-container {
+        /* Mobile adjustments */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* WordPress small screen breakpoint */
+    .tldr-pro-modal {
+        /* Small screen adjustments */
+    }
+}
+
+/* ==========================================================================
+   RTL Language Support
+   ========================================================================== */
+
+body.rtl .tldr-pro-button-container {
+    direction: rtl;
+}
+
+body.rtl .tldr-pro-button .tldr-pro-icon {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+/* ==========================================================================
+   High Specificity Overrides (use sparingly)
+   ========================================================================== */
+
+/* Only use !important when absolutely necessary to override theme styles */
+.tldr-pro-button-container.tldr-position-fixed_bottom_left,
+.tldr-pro-button-container.tldr-position-fixed_bottom_right,
+.tldr-pro-button-container.tldr-position-fixed_bottom_center {
+    position: fixed !important;
+}
+
+/* ==========================================================================
+   Theme-Specific Fixes
+   ========================================================================== */
+
+/* Twenty Twenty-One */
+.theme-twentytwentyone .tldr-pro-button-container {
+    /* Theme-specific adjustments */
+}
+
+/* Twenty Twenty-Two */
+.theme-twentytwentytwo .tldr-pro-button-container {
+    /* Theme-specific adjustments */
+}
+
+/* Twenty Twenty-Three */
+.theme-twentytwentythree .tldr-pro-button-container {
+    /* Theme-specific adjustments */
+}
+
+/* Twenty Twenty-Four */
+.theme-twentytwentyfour .tldr-pro-button-container {
+    /* Theme-specific adjustments */
+}
+
+/* Astra Theme */
+.ast-theme-transparent-header .tldr-position-floating_bar {
+    top: 60px; /* Account for transparent header */
+}
+
+/* GeneratePress */
+.generate-back-to-top .tldr-position-fixed_bottom_right {
+    bottom: 80px; /* Avoid overlap with back to top button */
+}
+
+/* OceanWP */
+#scroll-top.show ~ .tldr-position-fixed_bottom_right {
+    bottom: 80px; /* Avoid overlap with scroll button */
+}

@@ -1,0 +1,241 @@
+# Copyright (C) 2025 TL;DR Pro
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: TL;DR Pro 2.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tldr-pro\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-08-26T12:00:00+00:00\n"
+"PO-Revision-Date: 2025-08-26T14:00:00+00:00\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: tldr-pro\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. Plugin Name of the plugin
+msgid "TL;DR Pro - AI Content Summaries"
+msgstr "TL;DR Pro - AI Резюме Контенту"
+
+#. Plugin URI of the plugin
+msgid "https://example.com/tldr-pro"
+msgstr "https://example.com/tldr-pro"
+
+#. Description of the plugin
+msgid "Automatically generate intelligent summaries for WordPress posts and pages using AI. Improve user engagement with quick, scannable content previews."
+msgstr "Автоматично створюйте інтелектуальні резюме для записів і сторінок WordPress за допомогою ШІ. Покращте залучення користувачів за допомогою швидких оглядів контенту."
+
+#. Author of the plugin
+msgid "Your Name"
+msgstr "Ваше Ім'я"
+
+#. Author URI of the plugin
+msgid "https://example.com"
+msgstr "https://example.com"
+
+#: admin/class-tldr-pro-admin.php:100
+msgid "TL;DR Pro"
+msgstr "TL;DR Pro"
+
+#: admin/class-tldr-pro-admin.php:101
+msgid "Settings"
+msgstr "Налаштування"
+
+#: admin/class-tldr-pro-admin.php:102
+msgid "Bulk Operations"
+msgstr "Масові операції"
+
+#: admin/class-tldr-pro-admin.php:103
+msgid "Statistics"
+msgstr "Статистика"
+
+#: admin/partials/tldr-pro-admin-settings.php:10
+msgid "TL;DR Pro Settings"
+msgstr "Налаштування TL;DR Pro"
+
+#: admin/partials/tldr-pro-admin-settings.php:20
+msgid "General"
+msgstr "Загальні"
+
+#: admin/partials/tldr-pro-admin-settings.php:21
+msgid "AI Providers"
+msgstr "Провайдери ШІ"
+
+#: admin/partials/tldr-pro-admin-settings.php:22
+msgid "Display"
+msgstr "Відображення"
+
+#: admin/partials/tldr-pro-admin-settings.php:23
+msgid "Advanced"
+msgstr "Розширені"
+
+#: admin/partials/tldr-pro-admin-settings.php:40
+msgid "Active AI Provider"
+msgstr "Активний провайдер ШІ"
+
+#: admin/partials/tldr-pro-admin-settings.php:50
+msgid "Summary Language"
+msgstr "Мова резюме"
+
+#: admin/partials/tldr-pro-admin-settings.php:60
+msgid "Maximum Summary Length"
+msgstr "Максимальна довжина резюме"
+
+#: admin/partials/tldr-pro-admin-settings.php:61
+msgid "words"
+msgstr "слів"
+
+#: admin/partials/tldr-pro-admin-settings.php:70
+msgid "Use Emojis in Summaries"
+msgstr "Використовувати емодзі в резюме"
+
+#: admin/partials/tldr-pro-admin-settings.php:80
+msgid "Auto-generate on Post Save"
+msgstr "Автоматично генерувати при збереженні запису"
+
+#: admin/partials/tldr-pro-admin-settings.php:90
+msgid "Minimum Word Count"
+msgstr "Мінімальна кількість слів"
+
+#: admin/partials/tldr-pro-admin-settings.php:100
+msgid "Button Position"
+msgstr "Позиція кнопки"
+
+#: admin/partials/tldr-pro-admin-settings.php:101
+msgid "Before Content"
+msgstr "Перед контентом"
+
+#: admin/partials/tldr-pro-admin-settings.php:102
+msgid "After Content"
+msgstr "Після контенту"
+
+#: admin/partials/tldr-pro-admin-settings.php:103
+msgid "Both"
+msgstr "Обидві"
+
+#: admin/partials/tldr-pro-admin-settings.php:110
+msgid "Button Text"
+msgstr "Текст кнопки"
+
+#: admin/partials/tldr-pro-admin-settings.php:120
+msgid "Enable Floating Button"
+msgstr "Увімкнути плаваючу кнопку"
+
+#: admin/partials/tldr-pro-admin-settings.php:130
+msgid "Save Settings"
+msgstr "Зберегти налаштування"
+
+#: admin/partials/tldr-pro-admin-settings.php:131
+msgid "Reset to Defaults"
+msgstr "Скинути до стандартних"
+
+#: admin/partials/tldr-pro-admin-bulk.php:10
+msgid "Bulk Summary Generation"
+msgstr "Масова генерація резюме"
+
+#: admin/partials/tldr-pro-admin-bulk.php:20
+msgid "Select Posts"
+msgstr "Вибрати записи"
+
+#: admin/partials/tldr-pro-admin-bulk.php:30
+msgid "Title"
+msgstr "Заголовок"
+
+#: admin/partials/tldr-pro-admin-bulk.php:31
+msgid "Status"
+msgstr "Статус"
+
+#: admin/partials/tldr-pro-admin-bulk.php:32
+msgid "Summary"
+msgstr "Резюме"
+
+#: admin/partials/tldr-pro-admin-bulk.php:50
+msgid "Has Summary"
+msgstr "Має резюме"
+
+#: admin/partials/tldr-pro-admin-bulk.php:52
+msgid "No Summary"
+msgstr "Немає резюме"
+
+#: admin/partials/tldr-pro-admin-bulk.php:60
+msgid "Generate Selected"
+msgstr "Згенерувати вибрані"
+
+#: admin/partials/tldr-pro-admin-bulk.php:61
+msgid "Delete Selected"
+msgstr "Видалити вибрані"
+
+#: admin/partials/tldr-pro-admin-stats.php:10
+msgid "TL;DR Pro Statistics"
+msgstr "Статистика TL;DR Pro"
+
+#: admin/partials/tldr-pro-admin-stats.php:20
+msgid "Overview"
+msgstr "Огляд"
+
+#: admin/partials/tldr-pro-admin-stats.php:30
+msgid "Total Summaries"
+msgstr "Загальна кількість резюме"
+
+#: admin/partials/tldr-pro-admin-stats.php:40
+msgid "Provider Usage"
+msgstr "Використання провайдера"
+
+#: admin/partials/tldr-pro-admin-stats.php:50
+msgid "Language Distribution"
+msgstr "Розподіл за мовами"
+
+#: admin/partials/tldr-pro-admin-stats.php:60
+msgid "Recent Summaries"
+msgstr "Останні резюме"
+
+#: public/class-tldr-pro-public.php:200
+msgid "Failed to load summary"
+msgstr "Не вдалося завантажити резюме"
+
+#: public/class-tldr-pro-public.php:201
+msgid "Network error. Please try again."
+msgstr "Помилка мережі. Будь ласка, спробуйте ще раз."
+
+#: public/js/tldr-pro-button.js:208
+msgid "TL;DR Summary"
+msgstr "TL;DR Резюме"
+
+#: public/js/tldr-pro-button.js:390
+msgid "Error loading summary"
+msgstr "Помилка завантаження резюме"
+
+#: includes/class-tldr-pro-activator.php:50
+msgid "TL;DR Pro activated successfully."
+msgstr "TL;DR Pro успішно активовано."
+
+#: includes/class-tldr-pro-deactivator.php:50
+msgid "TL;DR Pro deactivated."
+msgstr "TL;DR Pro деактивовано."
+
+#: includes/ai/class-tldr-pro-ai-manager.php:100
+msgid "No AI provider configured"
+msgstr "Не налаштовано провайдера ШІ"
+
+#: includes/ai/class-tldr-pro-ai-manager.php:110
+msgid "API key not configured for provider: %s"
+msgstr "API ключ не налаштовано для провайдера: %s"
+
+#: includes/ai/class-tldr-pro-deepseek-api.php:50
+msgid "DeepSeek API key is not configured"
+msgstr "API ключ DeepSeek не налаштовано"
+
+#: includes/ai/class-tldr-pro-gemini-api.php:50
+msgid "Google Gemini API key is not configured"
+msgstr "API ключ Google Gemini не налаштовано"
+
+#: includes/class-tldr-pro-auto-generate.php:150
+msgid "Auto-generation failed for post %d: %s"
+msgstr "Автоматична генерація не вдалася для запису %d: %s"
+
+#: includes/class-tldr-pro-auto-generate.php:170
+msgid "Summary auto-generated for post %d"
+msgstr "Резюме автоматично згенеровано для запису %d"
